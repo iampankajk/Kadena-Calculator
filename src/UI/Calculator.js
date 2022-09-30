@@ -7,6 +7,17 @@ const Calculator = () => {
   const [power, setPower] = useState(1000);
   const [kPrice,setKPrice] = useState(0.01)
 
+const fetchData = async()=>{
+  let data = await fetch("https://www.binance.com/bapi/composite/v1/public/marketing/symbol/list")
+  data = await data.json()
+  data = data.data.filter(item=>item.name==='KDA');
+  setKPrice(data[0].price)
+}
+
+ useEffect(()=>{
+  fetchData()
+ },[kPrice])
+
   const increamentHandler = () => {
     if (count < 10) setCount((prev) => (prev = prev + 1));
     
