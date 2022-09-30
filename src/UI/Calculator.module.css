@@ -7,6 +7,7 @@
     border-radius: 10px;
     margin-top: 50px;
     background-color: aliceblue;
+    color: #85BC2D;
 }
 
 .actions{
@@ -43,6 +44,7 @@
     background-color: #D2F290;
     width: 30px;
     text-align: center;
+    color: black;
 }
 button{
     height: 25px;
@@ -99,10 +101,11 @@ input[type="range"] {
   }
   span{
     font-size: 14px;
+    color: #85BC2D;
   }
   
   .insight_box{
-    width: 300px;
+    width: 350px;
     margin: auto;
     margin-top: 20px;
     border-radius: 10px;
@@ -124,3 +127,4 @@ input[type="range"] {
  .sub_heading> p{
     font-size: 14px;
   }
+
