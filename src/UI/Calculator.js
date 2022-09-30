@@ -16,7 +16,7 @@ const fetchData = async()=>{
 
  useEffect(()=>{
   fetchData()
- },[kPrice])
+ },[])
 
   const increamentHandler = () => {
     if (count < 10) setCount((prev) => (prev = prev + 1));
