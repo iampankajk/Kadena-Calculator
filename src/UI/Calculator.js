@@ -20,9 +20,6 @@ const Calculator = () => {
     setAmount(e.target.value);
   };
 
-  const powerHandler = (e) => {
-    setPower(e.target.value);
-  };
 
   const priceHandler=(e)=>{
     setKPrice(e.target.value)
@@ -66,7 +63,7 @@ const Calculator = () => {
           max="10000"
           step="1000"
           value={power}
-          onChange={powerHandler}
+          
         ></input>
         <div className={styles.input_text}>
           <span>{power}Th/s</span> <span>Mining Power</span> <span>10000 Th/s</span>{" "}
