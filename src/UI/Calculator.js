@@ -1,12 +1,12 @@
 import React, { useEffect, useState } from "react";
 import styles from "./Calculator.module.css";
+const min=1
 
 const Calculator = () => {
   const [count, setCount] = useState(1);
   const [amount, setAmount] = useState(500);
   const [power, setPower] = useState(1000);
   const [kPrice,setKPrice] = useState(0.01)
-
 const fetchData = async()=>{
   let data = await fetch("https://www.binance.com/bapi/composite/v1/public/marketing/symbol/list")
   data = await data.json()
@@ -79,7 +79,7 @@ const fetchData = async()=>{
         <div className={styles.input_text}>
           <span>{power}Th/s</span> <span>Mining Power</span> <span>10000 Th/s</span>{" "}
         </div>
-        <input type="range" min="0" max="100" value={kPrice} onChange={priceHandler}></input>
+        <input type="range" min={min} max="100" value={kPrice} onChange={priceHandler}></input>
         <div className={styles.input_text}>
           <span>${kPrice}</span> <span>Kadena Price</span> <span>$100</span>{" "}
         </div>
