@@ -59,7 +59,7 @@ const fetchData = async()=>{
       <div className={styles.input_box}>
         <input
           type="range"
-          min="0"
+          min="1"
           max="5000"
           step="500"
           value={amount}
