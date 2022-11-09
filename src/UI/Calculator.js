@@ -5,7 +5,7 @@ const min=1
 const Calculator = () => {
   const [count, setCount] = useState(1);
   const [amount, setAmount] = useState(500);
-  const [power, setPower] = useState(1000);
+  const [power, setPower] = useState(0.4);
   const [kPrice,setKPrice] = useState(0.01)
 const fetchData = async()=>{
   let data = await fetch("https://www.binance.com/bapi/composite/v1/public/marketing/symbol/list")
@@ -38,7 +38,7 @@ const fetchData = async()=>{
 
   useEffect(() => {
     setAmount(500 * count);
-    setPower(1000*count)
+    setPower(0.4*count)
   }, [count]);
 
   useEffect(() => {
@@ -59,7 +59,7 @@ const fetchData = async()=>{
       <div className={styles.input_box}>
         <input
           type="range"
-          min="1"
+          min="500"
           max="5000"
           step="500"
           value={amount}
@@ -71,13 +71,13 @@ const fetchData = async()=>{
         <input
           type="range"
           min="0"
-          max="10000"
-          step="1000"
+          max="4"
+          step="1"
           value={power}
           
         ></input>
         <div className={styles.input_text}>
-          <span>{power}Th/s</span> <span>Mining Power</span> <span>10000 Th/s</span>{" "}
+          <span>{power.toFixed(2)}Th/s</span> <span>Mining Power</span> <span>4 Th/s</span>{" "}
         </div>
         <input type="range" min={min} max="100" value={kPrice} onChange={priceHandler}></input>
         <div className={styles.input_text}>
