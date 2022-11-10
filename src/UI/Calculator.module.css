@@ -6,8 +6,8 @@
   stroke: #04ff4a;
   border-radius: 10px;
   margin-top: 50px;
-  background-color: aliceblue;
-  color: #85bc2d;
+  background-color: aliceblue,0.6;
+  color: #000000;
 
 }
 
@@ -95,7 +95,7 @@ input[type="range"]::-webkit-slider-thumb {
 }
 span {
   font-size: 14px;
-  color: #85bc2d;
+  color: #000000;
 }
 
 .insight_box {
@@ -112,7 +112,7 @@ span {
   justify-content: space-between;
 }
 .sub_heading {
-  color: #85bc2d;
+  color: #000000;
   font-size: 16px;
   margin-top: 0px;
 }
